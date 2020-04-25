@@ -1,0 +1,19 @@
+{
+  "hosting": [
+    {
+      "target": "movie-app",
+      "public": "dist/movie-app",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "rewrites": [
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ]
+    }
+  ]
+}

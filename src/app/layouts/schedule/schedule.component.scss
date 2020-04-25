@@ -1,0 +1,175 @@
+#schedule-page {
+    overflow: hidden;
+    position: relative;
+    padding: 100px 0;
+}
+
+.schedule-content {
+    background: white;
+    padding: 20px;
+    -webkit-box-shadow: 0px 65px 62px -59px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 65px 62px -59px rgba(0,0,0,0.75);
+    box-shadow: 0px 65px 62px -59px rgba(0,0,0,0.75);
+    position: relative;
+    z-index: 2;
+    .schedule-poster {
+        width: 100%;
+        height: 400px;
+        background: url('https://cdn.flickeringmyth.com/wp-content/uploads/2019/08/marvel-black-widow-poster-600x917.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+    .release {
+        margin-bottom: 1rem;
+        color: #777a77;
+    }
+    p {
+        line-height: 1.5;
+    }
+}
+
+.schedule-bg {
+    // background: url('https://cdn.flickeringmyth.com/wp-content/uploads/2019/08/marvel-black-widow-poster-600x917.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    filter: blur(30px);
+    transform: scale(1.2);
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.section-title {
+    font-size: 2rem;
+    text-transform: capitalize;
+    margin-bottom: 1rem;
+}
+
+#hours-section {
+    margin-bottom: 1rem;
+    .hours-menu {
+        display: flex;
+        .time {
+            border: 1px solid #1f59ee;
+            margin-right: 10px;
+            padding: 10px;
+            color: #1f59ee;
+            border-radius: 4px;
+            font-weight: 700;
+            font-size: .9rem;
+            &:hover, &.selected {
+                background: #1f59ee;
+                border: 1px solid #1f59ee;
+                cursor: pointer;
+                color: white;
+            }
+        }
+    }
+}
+
+#tickets-section {
+    margin-bottom: 1rem;
+
+    .ticket-selection {
+        width: 400px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        margin-bottom: 5px;
+        input {
+            // margin: 0 10px;
+            width: 50px;
+            text-align: center;
+        }
+        .cols {
+            width: 80px;
+        }
+    }
+}
+
+#chair-section {
+    background: #1f59ee;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 100px 0;
+    flex-direction: column;
+
+    .chairs-grid {
+        display: grid;
+        grid-template-columns: repeat(9, 30px);
+        grid-template-rows: repeat(5, 30px);
+        grid-gap: 10px;
+        
+        .chair {
+            // height: 40px;
+            // width: 40px;
+            border: 1px solid #7c9df5;
+            border-radius: 5px;
+            &.selected, &:hover {
+                background: #fc6917;
+                border: 1px solid #fc6917;
+                cursor: pointer;
+            }
+            &.reserved {
+                background: #628bf3;
+                &:hover {
+                    border: 1px solid #7c9df5;
+                    background: #628bf3;
+                }
+            }
+        }
+    }
+    .chairs-legend {
+        display: flex;
+        padding: 50px;
+        .icon {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: 20px;
+        }
+        .selected-box {
+            border: 1px solid #fc6917;
+            background: #fc6917;
+            height: 15px;
+            width: 15px;
+            border-radius: 3px;
+            margin-right: 10px;
+        }
+        .reserved-box {
+            border: 1px solid #7c9df5;
+            background: #628bf3;
+            height: 15px;
+            width: 15px;
+            border-radius: 3px;
+            margin-right: 10px;
+        }
+        .open-box {
+            border: 1px solid #7c9df5;
+            height: 15px;
+            width: 15px;
+            border-radius: 3px;
+            margin-right: 10px;
+        }
+        span {
+            color: white;
+        }
+    }
+    .continue {
+        .continue-btn {
+            background: white;
+            color: #1f59ee;
+            padding: 10px 30px;
+            border-radius: 4px;
+            &:hover {
+                background: #fc6917;
+                color: white;
+                cursor: pointer;
+            }
+        }
+    }
+}

@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "todoapp-5e5a2": {
+      "hosting": {
+        "movie-app": [
+          "todoapp-5e5a2"
+        ]
+      }
+    }
+  }
+}

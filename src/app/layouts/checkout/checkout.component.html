@@ -1,0 +1,68 @@
+<div id="checkout-page">
+    <div class="checkout-bg" [ngStyle]="{
+        'background': 'url(' + movieData.imageUrl + ')'
+    }">
+
+    </div> 
+    <div class="container">
+        <div class="checkout-content">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <h1>Checkout Receipt</h1>
+                </div>
+                <div class="receipt-head">
+                    <div class="items">
+                        <div class="label">Movie Title:</div>
+                        <div class="content">{{movieData.title}}</div>
+                    </div>
+                    <div class="items">
+                        <div class="label">Movie Time:</div>
+                        <div class="content">{{time}}</div>
+                    </div>
+                    <div class="items">
+                        <div class="label">Seat(s):</div>
+                        <div class="content">{{seats}}</div>
+                    </div>
+                </div>
+                
+            </div>
+            
+            <section id="details-section">
+                <div class="row">
+                    <div class="ticket-description">
+                        <div class="item">
+                            <div class="cols-1">Adult Ticket</div>
+                            <div class="cols-2">{{adultTickets}}</div>
+                            <div class="cols-3">${{adultTickets * adultTicketPrice}}</div>
+                        </div>
+                        <div class="item">
+                            <div class="cols-1">Child Ticket</div>
+                            <div class="cols-2">{{childTickets}}</div>
+                            <div class="cols-3">${{childTickets * childTicketPrice}}</div>
+                        </div>
+                        <div class="item">
+                            <div class="cols-1">Senior Ticket</div>
+                            <div class="cols-2">{{seniorTickets}}</div>
+                            <div class="cols-3">${{seniorTickets * seniorTicketPrice}}</div>
+                        </div>
+                        <div class="item">
+                            <div class="cols-1">Tax (GST)</div>
+                            <div class="cols-2"></div>
+                            <div class="cols-3">${{taxRate * ((adultTickets * adultTicketPrice) + (childTickets * childTicketPrice) + (seniorTickets * seniorTicketPrice))}}</div>
+                        </div>
+                        <div class="item bold">
+                            <div class="cols-1">Total Amount</div>
+                            <div class="cols-2"></div>
+                            <div class="cols-3">${{(adultTickets * adultTicketPrice) + (childTickets * childTicketPrice) + (seniorTickets * seniorTicketPrice) + (taxRate * ((adultTickets * adultTicketPrice) + (childTickets * childTicketPrice) + (seniorTickets * seniorTicketPrice)))}}</div>
+                        </div>
+                        <div class="item">
+                            <div class="btn btn-primary" (click)="checkOut()">Proceed to Checkout</div>
+                        </div>
+                    </div>
+                </div>
+                
+            </section>
+        </div>
+    </div>
+</div>
+
